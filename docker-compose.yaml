@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  fundi_app:
+    container_name: eureka-server
+    build: .
+    restart: always
+    ports:
+      - "8761:8761"
+    networks:
+      - abc-local
+networks:
+  abc-local:
+    external: true
